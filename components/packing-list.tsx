@@ -1,4 +1,4 @@
-export function PackingList({ items }) {
+export function PackingList({ items }: { items: string[] }) {
   // 2つのアイテムごとにグループ化するためのヘルパー関数
   const groupedItems = [];
   for (let i = 0; i < items.length; i += 2) {
