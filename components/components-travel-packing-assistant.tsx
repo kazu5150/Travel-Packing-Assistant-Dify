@@ -11,10 +11,9 @@ export function TravelPackingAssistantComponent() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  const handleGenerateList = async (formData: any) => {
+  const handleGenerateList = async (formData: { destination: string; duration: number; season: string; }) => {
     setIsLoading(true)
     setError(null)
-
     try {
       const response = await fetch('https://api.dify.ai/v1/chat-messages', {
         method: 'POST',
