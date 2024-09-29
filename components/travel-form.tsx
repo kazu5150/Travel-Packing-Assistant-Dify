@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export function TravelForm({ onSubmit }) {
+export function TravelForm({ onSubmit }: { onSubmit: (data: { destination: string; duration: number; season: string; apiKey: string; }) => void }) {
   const [destination, setDestination] = useState('');
   const [duration, setDuration] = useState('');
   const [season, setSeason] = useState('');
