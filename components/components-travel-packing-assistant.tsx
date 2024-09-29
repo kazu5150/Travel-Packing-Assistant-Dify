@@ -9,7 +9,7 @@ import { Loader2 } from 'lucide-react'
 export function TravelPackingAssistantComponent() {
   const [packingList, setPackingList] = useState(null)
   const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<string | null>(null);
 
   const handleGenerateList = async (formData: { destination: string; duration: number; season: string; apiKey: string; }) => {
     setIsLoading(true)
