@@ -11,7 +11,7 @@ export function TravelPackingAssistantComponent() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState(null)
 
-  const handleGenerateList = async (formData) => {
+  const handleGenerateList = async (formData: any) => {
     setIsLoading(true)
     setError(null)
 
