@@ -6,10 +6,10 @@ export function TravelForm({ onSubmit }: { onSubmit: (data: { destination: strin
   const [season, setSeason] = useState('');
   const [apiKey, setApiKey] = useState('');
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>)  => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    onSubmit({ destination, duration, season, apiKey });
-  }
+    onSubmit({ destination, duration: parseInt(duration), season, apiKey });
+  };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
